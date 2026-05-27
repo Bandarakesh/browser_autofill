@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Smart Autofill</h2>
+        
+        <div class="section">
+            <label for="resume-upload">Upload Resume (PDF):</label>
+            <input type="file" id="resume-upload" accept=".pdf,.doc,.docx">
+            <button id="upload-btn">Process Resume</button>
+            <div id="upload-status" class="status"></div>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <button id="autofill-btn" class="primary">Autofill This Page</button>
+            <div id="autofill-status" class="status"></div>
+        </div>
+
+        <div id="question-section" class="section hidden">
+            <p id="agent-question">Agent needs more info...</p>
+            <textarea id="user-answer" placeholder="Type your answer..."></textarea>
+            <div class="controls">
+                <button id="record-btn">🎤 Voice</button>
+                <button id="submit-answer-btn">Submit</button>
+            </div>
+            <div id="voice-status" class="status"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
